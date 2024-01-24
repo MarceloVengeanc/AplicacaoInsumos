@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/dialogbkg"
+    android:orientation="vertical">
+
+    <TextView
+        android:id="@+id/txtCargaMudas2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/wrapper_btn_claro"
+        android:text="Lançamento de Insumos"
+        android:textAlignment="center"
+        android:textAllCaps="true"
+        android:textColor="@color/white"
+        android:textSize="22sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <EditText
+        android:id="@+id/editInsumo"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:layout_weight="1"
+        android:ems="10"
+        android:enabled="false"
+        android:focusable="false"
+        android:hint="Cod Insumo - Desc"
+        android:inputType="number"
+        android:maxLength="20"
+        android:textSize="20dp"
+        android:theme="@style/LayoutPadraoEditTextLogin"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txtCargaMudas2"
+        tools:ignore="Autofill,SpUsage,TouchTargetSizeCheck" />
+
+    <EditText
+        android:id="@+id/editProg"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:ellipsize="end"
+        android:ems="10"
+        android:enabled="false"
+        android:focusable="false"
+        android:focusableInTouchMode="true"
+        android:hint="Programado:"
+        android:inputType="textPersonName"
+        android:maxLines="1"
+        android:textSize="20sp"
+        android:theme="@style/LayoutPadraoEditTextLogin"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/editInsumo"
+        tools:ignore="Autofill,HardcodedText,TouchTargetSizeCheck" />
+
+    <EditText
+        android:id="@+id/editDp"
+        android:layout_width="280dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:ems="10"
+        android:enabled="false"
+        android:focusable="false"
+        android:hint="Depósito: "
+        android:ellipsize="end"
+        android:maxLines="1"
+        android:textSize="20dp"
+        android:theme="@style/LayoutPadraoEditTextLogin"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/editAplic"
+        tools:ignore="Autofill,SpUsage,TouchTargetSizeCheck" />
+
+    <ImageButton
+        android:id="@+id/btnBuscaDp"
+        style="@style/LayoutPadraoBttLupa"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="4dp"
+        app:layout_constraintBottom_toBottomOf="@+id/editDp"
+        app:layout_constraintStart_toEndOf="@+id/editDp"
+        app:layout_constraintTop_toTopOf="@+id/editDp"
+        tools:ignore="ContentDescription,SpeakableTextPresentCheck,TouchTargetSizeCheck" />
+
+    <EditText
+        android:id="@+id/editAplic"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:ellipsize="end"
+        android:ems="10"
+        android:focusableInTouchMode="true"
+        android:hint="Aplicado:"
+        android:inputType="numberDecimal"
+        android:maxLength="10"
+        android:maxLines="1"
+        android:textSize="20sp"
+        android:theme="@style/LayoutPadraoEditTextLogin"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/editProg"
+        tools:ignore="Autofill,HardcodedText,TouchTargetSizeCheck" />
+
+    <Button
+        android:id="@+id/btnSalvar"
+        style="@style/LayoutPadraoBttLogin"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dip"
+        android:drawableTint="@color/white"
+        android:padding="15dip"
+        android:text="@string/btnLancar"
+        android:textAlignment="center"
+        android:textColor="@color/white"
+        android:textSize="28sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/editDp" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

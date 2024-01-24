@@ -1,0 +1,293 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:theme="@style/LayoutPadraoConstraint"
+    tools:context=".telas.ApontamentoInsumosActivity">
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_margin="10dip"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="10dp"
+        android:layout_marginBottom="10dp"
+        android:theme="@style/LayoutPadraoFrame"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" >
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_margin="4dip"
+                android:theme="@style/LayoutPadraoConstraintInterno">
+
+                <EditText
+                    android:id="@+id/editData"
+                    android:layout_width="150dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="4dp"
+                    android:layout_weight="1"
+                    android:ems="10"
+                    android:enabled="false"
+                    android:focusable="false"
+                    android:focusableInTouchMode="true"
+                    android:hint="Data"
+                    android:inputType="textPersonName"
+                    android:textSize="20sp"
+                    android:theme="@style/LayoutPadraoEditTextLogin"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/textView4"
+                    tools:ignore="Autofill,DuplicateIds,HardcodedText,TouchTargetSizeCheck" />
+
+                <ImageButton
+                    android:id="@+id/btnBuscaData"
+                    style="@style/LayoutPadraoBttLupa"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="3dp"
+                    app:layout_constraintBottom_toBottomOf="@+id/editData"
+                    app:layout_constraintStart_toEndOf="@+id/editData"
+                    app:layout_constraintTop_toTopOf="@+id/editData"
+                    tools:ignore="ContentDescription,SpeakableTextPresentCheck,TouchTargetSizeCheck" />
+
+                <EditText
+                    android:id="@+id/editCentroDeCusto"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:ems="10"
+                    android:enabled="false"
+                    android:focusable="false"
+                    android:hint="@string/campo_centro_custo"
+                    android:ellipsize="end"
+                    android:maxLines="1"
+                    android:textSize="20dp"
+                    android:theme="@style/LayoutPadraoEditTextLogin"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/editData"
+                    tools:ignore="Autofill,SpUsage,TouchTargetSizeCheck" />
+
+                <EditText
+                    android:id="@+id/editOS"
+                    android:layout_width="120dp"
+                    android:layout_height="match_parent"
+                    android:layout_marginStart="4dp"
+                    android:layout_marginTop="4dp"
+                    android:layout_weight="1"
+                    android:ems="10"
+                    android:enabled="false"
+                    android:focusable="false"
+                    android:hint="@string/os"
+                    android:ellipsize="end"
+                    android:maxLines="1"
+                    android:textSize="20sp"
+                    android:theme="@style/LayoutPadraoEditTextLogin"
+                    app:layout_constraintStart_toEndOf="@+id/btnBuscaData"
+                    app:layout_constraintTop_toBottomOf="@+id/textView4"
+                    tools:ignore="Autofill,TouchTargetSizeCheck" />
+
+                <ImageButton
+                    android:id="@+id/btnBuscaOS"
+                    style="@style/LayoutPadraoBttLupa"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:width="2dp"
+                    android:padding="15dip"
+                    app:layout_constraintStart_toEndOf="@+id/editOS"
+                    app:layout_constraintTop_toTopOf="@+id/editOS"
+                    tools:ignore="ContentDescription,SpeakableTextPresentCheck,TouchTargetSizeCheck" />
+
+
+                <EditText
+                    android:id="@+id/editOperacao"
+                    android:layout_width="370dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:ellipsize="end"
+                    android:maxLines="1"
+                    android:ems="10"
+                    android:enabled="false"
+                    android:focusable="false"
+                    android:hint="Operação"
+                    android:textSize="20sp"
+                    android:theme="@style/LayoutPadraoEditTextLogin"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/editCentroDeCusto"
+                    tools:ignore="Autofill,HardcodedText,TouchTargetSizeCheck" />
+
+                <EditText
+                    android:id="@+id/editFazenda"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:ems="10"
+                    android:enabled="false"
+                    android:focusable="false"
+                    android:hint="@string/campo_fazenda"
+                    android:ellipsize="end"
+                    android:maxLines="1"
+                    android:textSize="20dp"
+                    android:theme="@style/LayoutPadraoEditTextLogin"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/editOperacao"
+                    tools:ignore="Autofill,SpUsage,TouchTargetSizeCheck" />
+
+                <EditText
+                    android:id="@+id/editPrePlantio"
+                    android:layout_width="150dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:ems="10"
+                    android:enabled="false"
+                    android:focusable="false"
+                    android:hint="@string/campo_sis_aplicacao"
+                    android:ellipsize="end"
+                    android:maxLines="1"
+                    android:textSize="20dp"
+                    android:theme="@style/LayoutPadraoEditTextLogin"
+                    app:layout_constraintEnd_toStartOf="@+id/btnBuscaPrePlantio"
+                    app:layout_constraintTop_toBottomOf="@+id/editFazenda"
+                    tools:ignore="Autofill,SpUsage,TouchTargetSizeCheck" />
+
+                <EditText
+                    android:id="@+id/editVazao"
+                    android:layout_width="150dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:ems="10"
+                    android:enabled="false"
+                    android:focusable="false"
+                    android:hint="@string/campo_vazao"
+                    android:inputType="numberDecimal"
+                    android:ellipsize="end"
+                    android:maxLines="1"
+                    android:textSize="20dp"
+                    android:theme="@style/LayoutPadraoEditTextLogin"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/editFazenda"
+                    tools:ignore="Autofill,SpUsage,TouchTargetSizeCheck" />
+
+                <ImageButton
+                    android:id="@+id/btnBuscaPrePlantio"
+                    style="@style/LayoutPadraoBttLupa"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_marginEnd="4dp"
+                    android:layout_marginBottom="3dp"
+                    app:layout_constraintBottom_toBottomOf="@+id/editPrePlantio"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toTopOf="@+id/editPrePlantio"
+                    tools:ignore="ContentDescription,SpeakableTextPresentCheck,TouchTargetSizeCheck" />
+
+                <TextView
+                    android:id="@+id/txtInsumos"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="4dp"
+                    android:background="@drawable/wrapper_btn_claro"
+                    android:text="Insumos"
+                    android:textAlignment="center"
+                    android:textAllCaps="true"
+                    android:textColor="@color/white"
+                    android:textSize="22sp"
+                    app:layout_constraintTop_toBottomOf="@+id/editVazao"
+                    tools:ignore="HardcodedText" />
+
+                <TextView
+                    android:id="@+id/txtLotes"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="4dp"
+                    android:background="@drawable/wrapper_btn_claro"
+                    android:text="Lotes"
+                    android:textAlignment="center"
+                    android:textAllCaps="true"
+                    android:textColor="@color/white"
+                    android:textSize="22sp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/rvInsumos"
+                    tools:ignore="HardcodedText" />
+
+                <RadioGroup
+                    android:id="@+id/radioGroup"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:orientation="horizontal"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/editPrePlantio" />
+
+                <TextView
+                    android:id="@+id/textView4"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/wrapper_btn_claro"
+                    android:text="Apontamento de Insumos"
+                    android:textAlignment="center"
+                    android:textAllCaps="true"
+                    android:textColor="@color/white"
+                    android:textSize="20sp"
+                    app:layout_constraintTop_toTopOf="parent"
+                    tools:ignore="HardcodedText" />
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/rvInsumos"
+                    android:layout_width="0dp"
+                    android:layout_height="165dp"
+                    android:background="@drawable/wrapper_rv_branco"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="1.0"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/txtInsumos">
+
+                </androidx.recyclerview.widget.RecyclerView>
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/rvLotes"
+                    android:layout_width="0dp"
+                    android:layout_height="165dp"
+                    android:background="@drawable/wrapper_rv_branco"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="1.0"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/txtLotes" />
+
+                <Button
+                    android:id="@+id/btn_Salvar"
+                    style="@style/LayoutPadraoBttLogin"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="10dip"
+                    android:layout_marginTop="60dp"
+                    android:drawableTint="@color/white"
+                    android:padding="15dip"
+                    android:text="@string/btn_salvar"
+                    android:textAlignment="center"
+                    android:textColor="@color/white"
+                    android:textSize="28sp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="1.0"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/rvLotes" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+        </ScrollView>
+
+    </FrameLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>
